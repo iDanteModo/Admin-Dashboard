@@ -37,14 +37,14 @@ img {
 
 html {
     color-scheme: dark; 
-    font-family: "Roboto";
+    
     background-color: rgb(3, 6, 45);
 }
 
 body {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 50px;
-    grid-template-rows: 100px 100px 1fr 1fr;
+    grid-template-rows: 100px auto auto 1fr;
     gap: 20px;
     height: 100vh;
 }
@@ -52,7 +52,7 @@ body {
 .row {
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 15px;
 }
 
 header {
@@ -191,9 +191,7 @@ header {
     font-size: 0.7rem;
 }
 
-.column {
-    margin-left: -20px;
-}
+
 
 .column h1 {
     font-size: 1.5rem;
@@ -224,7 +222,7 @@ header {
 
 .project {
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 3 ;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -281,6 +279,7 @@ header {
 .news3 {
     font-size: 0.8rem;
     padding: 20px;
+    margin-top: -10px;
 }
 
 .news1::after, 
@@ -288,11 +287,10 @@ header {
     content: "";
     display: block;
     width: 100%;
-    border-bottom: 1px var(--in) solid;
+    border-bottom: 1px var(--maincolor) solid;
     border-spacing: 5ch;
     text-align: center;
-    margin: auto;
-    padding-top: 20px;
+    padding-top: 21.5px;
 }
 
 .side-content{
