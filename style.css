@@ -1,0 +1,333 @@
+@import url('../node_modules/modern-normalize/modern-normalize.css');
+
+:root {
+  line-height: 1.5;
+  --maincolor: rgb(64, 143, 209);
+  --cardscolor: rgb(233,184,63);
+  --fontcolor: whitesmoke;
+  --inputcolor: rgb(227, 232, 240);
+  --backgroundmaincolor: rgb(255, 255, 255, 0.2);
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol[role="list"], ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(Fonts/Roboto-Regular.ttf);
+}
+
+/* DANTE CODE HERE -----------*/
+
+html {
+    color-scheme: dark; 
+    font-family: "Roboto";
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 50px;
+    grid-template-rows: 100px 100px 1fr 1fr;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+header {
+    grid-column: 2 /  span 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--backgroundmaincolor);
+    margin-left: -50px;
+}
+
+header > input {
+    height: 25px;
+    width: 500px;
+    border-radius: 20px;
+    background-color: var(--inputcolor);
+    border-color: transparent;
+    color: black;
+}
+
+.profile-picture-mini {
+    filter: invert(100%);
+    height: 50px;
+    width: 50px;
+}
+
+.icon img {
+    width: 20px;
+    height: 20px;
+    filter: invert(100%);
+}
+
+.icon button {
+    background-color: transparent;
+    padding: 0;
+    border-color: transparent;
+}
+
+.icon img:hover{
+    filter: brightness(0) saturate(100%) invert(42%) sepia(97%) saturate(314%) hue-rotate(165deg) brightness(100%) contrast(99%) 
+}
+
+.side-bar {
+    padding-top: 30px;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: var(--maincolor);
+    padding-left: 20px;
+}
+
+.side-bar a {
+    text-decoration: none;
+    color: whitesmoke
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.logo h1 {
+    align-self: center;
+}
+
+.logo img {
+    filter: invert(100%);
+    width: 50px;
+    height: 50px;
+}
+
+.profile-picture { 
+    filter: invert(100%);
+    width: 75px;
+    height: 75px;
+}
+
+.user-interaction,
+.user-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 25px;
+}
+
+.user-interaction img,
+.user-settings img {
+    filter: invert(100%);
+    width: 25px;
+    height: 25px;
+}
+
+.user-greetings {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--backgroundmaincolor);
+    margin-top: -20px;
+    margin-left: -20px;
+    padding-left: 50px;
+    margin-right: -70px;
+}
+
+.user-greetings span,
+.user-greetings h1 {
+    align-self: center;
+}
+
+.user-greetings span {
+    font-size: 0.7rem;
+}
+
+.column h1 {
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 100px);
+    height: 10px;
+    gap: 40px;
+    padding: 20px;
+}
+
+.buttons > button {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background-color: var(--maincolor);
+    font-size: 0.9rem;
+    font-weight: 800;
+    border-color: transparent;
+}
+
+.buttons > button:hover {
+    color: black;
+} 
+
+.project {
+    grid-column: 2;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project > h2 {
+    font-size: 1.2rem;
+}
+
+.projects { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 2fr 2fr;
+    gap: 50px;
+}
+
+.card { 
+    background-color: var(--backgroundmaincolor);
+    border-radius: 5px;
+    border-left: 8px var(--cardscolor) solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2px;
+    padding: 30px 20px;
+    gap: 30px;
+}
+
+.card img {
+    width: 22px;
+    height: 22px;
+    filter: invert(100%);
+}
+
+.cards-row {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+.card .title {
+    font-weight: 800;
+}
+
+.announcements {
+    background-color: var(--backgroundmaincolor);
+    border-radius: 5px;
+    border-color: transparent;
+}
+
+.news1,
+.news2,
+.news3 {
+    font-size: 0.8rem;
+    padding: 20px;
+}
+
+.news1::after, 
+.news2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px var(--inputcolor) solid;
+    border-spacing: 5ch;
+    text-align: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.side-content{
+    grid-column: 3;
+    grid-row: 3 / span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-content h1 {
+    font-size: 1.2rem;
+}
+
+.side-content .title {
+    font-weight: 800;
+}
+
+.trending { 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.11rem;
+}
+
+.users {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--backgroundmaincolor);
+    padding: 15px;
+    margin-top: 13px;
+    border-radius: 5px;
+    gap: 30px;
+}
+
+.userid  {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.user { 
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7;
+}
+
+.trending img {
+    filter: invert(100%);
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 100px;
+    padding: 5px;
+}
+
+footer { 
+    grid-column: 1 / span 3;
+    grid-row: 4;
+    text-align: center;
+}
+
