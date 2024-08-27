@@ -7,6 +7,7 @@
   --fontcolor: rgb(145,10,83);
   --inputcolor: rgb(227, 232, 240);
   --backgroundmaincolor: rgb(255, 255, 255, 0.2);
+  --pictocolor: brightness(0) saturate(100%) invert(42%) sepia(97%) saturate(314%) hue-rotate(165deg) brightness(100%) contrast(99%);
 }
 
 h1, h2, h3, h4, h5, figure, p, ol, ul {
@@ -110,7 +111,7 @@ header {
 }
 
 .icon img:hover{
-    filter: brightness(0) saturate(100%) invert(42%) sepia(97%) saturate(314%) hue-rotate(165deg) brightness(100%) contrast(99%) 
+    filter: brightness(0) saturate(100%) invert(42%) sepia(97%) saturate(314%) hue-rotate(165deg) brightness(100%) contrast(99%); 
 }
 
 .side-bar {
@@ -170,6 +171,11 @@ header {
     height: 25px;
 }
 
+.user-interaction .row:hover,
+.user-settings .row:hover {
+    filter: var(--pictocolor);
+}
+
 .user-greetings {
     grid-column: 2 / span 2;
     grid-row: 2;
@@ -216,8 +222,8 @@ header {
     border-color: transparent;
 }
 
-.buttons > button:hover {
-    color: grey;
+button > h1:hover {
+    filter: var(--pictocolor);
 } 
 
 .project {
