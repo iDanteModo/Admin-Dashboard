@@ -217,7 +217,7 @@ header {
 }
 
 .buttons > button:hover {
-    color: black;
+    color: grey;
 } 
 
 .project {
